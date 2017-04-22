@@ -1,0 +1,8 @@
+<resources>
+    <string name="confirm">Confirm</string>
+    <string name="notice">Notice</string>
+    <string name="error_message_network">The current data communication is not smooth. Check your network connection and try again.</string>
+    <string name="cancel">Cancel</string>
+    <string name="failed_file_upload">Failed file upload</string>
+    <string name="file_selection_failed">File selection failed</string>
+</resources>
