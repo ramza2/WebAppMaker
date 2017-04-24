@@ -4,31 +4,26 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Message;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.GeolocationPermissions;
 import android.webkit.JsResult;
 import android.webkit.ValueCallback;
-import android.webkit.WebBackForwardList;
 import android.webkit.WebChromeClient;
-import android.webkit.WebHistoryItem;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -39,8 +34,6 @@ import com.activednc.webappmaker.utils.WebViewDialog;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -454,7 +447,7 @@ public class MainActivity extends AppCompatActivity {
         return captureIntent;
     }
 
-    @OnClick({R.id.homeBtn, R.id.prevBtn, R.id.nextBtn, R.id.refreshBtn})
+    @OnClick({R.id.homeBtn, R.id.prevBtn, R.id.nextBtn, R.id.refreshBtn, R.id.topBtn})
     public void onClick(View v) {
         int id = v.getId();
         switch (id){
@@ -470,6 +463,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.refreshBtn:
                 webView.reload();
+                break;
+            case R.id.topBtn:
+                webView.scrollTo(0,0);
                 break;
         }
     }
