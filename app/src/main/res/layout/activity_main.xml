@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#f8f8f8">
         <ImageButton
             android:id="@+id/homeBtn"
             android:layout_width="0dp"
