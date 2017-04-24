@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:background="@drawable/top_btn"
+            android:background="@android:color/transparent"
+            android:src="@drawable/top_btn"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
