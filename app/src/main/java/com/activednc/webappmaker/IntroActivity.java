@@ -17,7 +17,12 @@ public class IntroActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(IntroActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         }, 3000);
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }
